@@ -1,7 +1,8 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+var userInfo = [];
 
-let readInfo
+// // TODO: Create an array of questions for user input
 inquirer.prompt([
     {
         type: 'input',
@@ -45,14 +46,22 @@ inquirer.prompt([
         message: 'What are the test guidelines of the project?',
     },
 ])
-// TODO: Create an array of questions for user input
-const questions = [];
+.then((data) => {
+    userInfo = data
+    writeToFile('../README.md', userInfo)
+})
+.then(() => console.log("Job's done"))
+.catch((err) => console.log(err))
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
 
-// TODO: Create a function to initialize app
-function init() {}
 
-// Function call to initialize app
-init();
+// // TODO: Create a function to write README file
+function writeToFile(fileName, data) {
+    fs.promises.writeFile("../README.md", JSON.stringify(userInfo))
+}
+
+// // TODO: Create a function to initialize app
+// function init() {}
+
+// // Function call to initialize app
+// init();
