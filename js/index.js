@@ -14,16 +14,16 @@ inquirer.prompt([
         name: 'description',
         message: 'What is the description of the project?',
     },
-    // {
-    //     type: 'input',
-    //     name: 'table of contents',
-    //     message: 'What is the table of contents of the project?',
-    // },
-    // {
-    //     type: 'input',
-    //     name: 'installation',
-    //     message: 'What is the installation process of the project?',
-    // },
+    {
+        type: 'input',
+        name: 'tableOfContents',
+        message: 'What is the table of contents of the project?',
+    },
+    {
+        type: 'input',
+        name: 'installation',
+        message: 'What is the installation process of the project?',
+    },
     // {
     //     type: 'input',
     //     name: 'usage',
@@ -48,7 +48,7 @@ inquirer.prompt([
 ])
 .then((data) => {
     userInfo = data
-    writeToFile('../README.md', userInfo)
+    writeToFile(userInfo)
 })
 .then(() => console.log("Job's done"))
 .catch((err) => console.log(err))
@@ -56,9 +56,9 @@ inquirer.prompt([
 
 
 // // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    fs.promises.writeFile("../README.md", `# ${userInfo.title} \n \n`);
-    fs.promises.appendFile("../README.md", `## Description \n ${userInfo.description}`);
+function writeToFile(userInfo) {
+    fs.promises.writeFile("../README.md", `# ${userInfo.title} \n \n## Description \n \n${userInfo.description} \n \n`);
+    fs.promises.appendFile("../README.md", `## Table of Contents \n \n${userInfo.tableOfContents} \n \n## Installation \n \n${userInfo.installation} \n \n`);
 }
 
 // // TODO: Create a function to initialize app
