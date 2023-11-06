@@ -26,7 +26,7 @@ inquirer.prompt([
     },
     {
         type: 'list',
-        name: 'License',
+        name: 'license',
         message: 'What is the license of the project?',
         choices: ['MIT', 'Apache License 2.0', 'Unlicense', 'Mozilla Public License'],
     },
@@ -63,11 +63,10 @@ inquirer.prompt([
 
 // // TODO: Create a function to write README file
 function writeToFile(userInfo) {
-    fs.promises.writeFile("../README.md", `# ${userInfo.title} \n \n## Description \n \n${userInfo.description} \n \n`);
-    fs.promises.appendFile("../README.md", `## Installation \n \n${userInfo.installation} \n \n`);
-    fs.promises.appendFile("../README.md", `## Usage \n \n${userInfo.usage} \n \n## License \n \n${userInfo.license} \n \n`);
-    fs.promises.appendFile("../README.md", `## Contributions \n \n${userInfo.contributors} \n \n## Testing \n \n${userInfo.tests} \n \n`);
-    fs.promises.appendFile("../README.md", `## Questions \n \nGitHub Profile: https://github.com/${userInfo.githubUsername} \n \nEmail: ${userInfo.email} \n \n`);
+    fs.promises.writeFile("../README.md", `# ${userInfo.title} \n \n## Table of Contents \n \n[Description](#description) | [Installation](#installation) | [Usage](#usage) | [License](#license) | [Contributions](#contributions) | [Testing](#testing) | [Questions](#questions)  \n \n## Description \n \n${userInfo.description} \n \n`);
+    fs.promises.appendFile("../README.md",`## Installation \n \n${userInfo.installation} \n \n## Usage \n \n${userInfo.usage} \n \n## License \n \n${userInfo.license} \n \n`);
+    fs.promises.appendFile("../README.md",`## Contributions \n \n${userInfo.contributions} \n \n## Testing \n \n${userInfo.tests} \n \n`);
+    fs.promises.appendFile("../README.md",`## Questions \n \nGitHub Profile: https://github.com/${userInfo.githubUsername} \n \nEmail: ${userInfo.email} \n \n`);
 }
 
 // // TODO: Create a function to initialize app
