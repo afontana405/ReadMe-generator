@@ -1,36 +1,38 @@
-# ddddd 
+# dd 
  
 ## Table of Contents 
  
-[Description](#description) | [Installation](#installation) | [Usage](#usage) | [License](#license) | [Contributions](#contributions) | [Testing](#testing) | [Questions](#questions)  
+[Description](#description) | [Installation](#installation) | [Usage](#usage) | [Contributions](#contributions) | [Testing](#testing) | [Questions](#questions) | [License](#license) 
+ 
+[![License](https://img.shields.io/badge/License-Mozilla_Public-blue.svg)](https://opensource.org/licenses/Apache-2.0) 
  
 ## Description 
  
-ddd 
+dd 
  
 ## Installation 
  
-ddd 
+dd 
  
 ## Usage 
  
 dd 
  
-## License 
+## Questions 
  
-MIT 
+GitHub Profile: https://github.com/dd 
+ 
+Email: dd 
  
 ## Contributions 
  
-ddd 
+dd 
  
 ## Testing 
  
-ddd 
+dd 
  
-## Questions 
+## License 
  
-GitHub Profile: https://github.com/ddd 
- 
-Email: dd 
+This application is covered under the Mozilla Public License 
  
