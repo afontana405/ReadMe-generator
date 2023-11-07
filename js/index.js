@@ -2,7 +2,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 var userInfo = [];
 
-// // TODO: Create an array of questions for user input
+// prompts user for info on project
 inquirer.prompt([
     {
         type: 'input',
@@ -52,16 +52,14 @@ inquirer.prompt([
     }
 
 ])
-.then((data) => {
+.then((data) => { // converts data and calls function
     userInfo = data
     writeToFile(userInfo)
 })
-.then(() => console.log("Job's done"))
+.then(() => console.log("README Created"))
 .catch((err) => console.log(err))
 
-
-
-// // TODO: Create a function to write README file
+// creates a new README file and adds user info
 function writeToFile(userInfo) {
     fs.promises.writeFile("../README.md", `# ${userInfo.title} \n \n`);
     if (userInfo.license == 'MIT') {
@@ -81,11 +79,4 @@ function writeToFile(userInfo) {
     fs.promises.appendFile("../README.md",`## Testing \n \n${userInfo.tests} \n \n`);
     fs.promises.appendFile("../README.md",`## Questions \n \nGitHub Profile: https://github.com/${userInfo.githubUsername} \n \nEmail: ${userInfo.email} \n \n`);
     fs.promises.appendFile("../README.md",`## License \n \nThis application is covered under the ${userInfo.license} License \n \n`);
-    // fs.promises.appendFile("../README.md", ``);
 }
-
-// // TODO: Create a function to initialize app
-// function init() {}
-// ## Table of Contents \n \n${userInfo.tableOfContents} \n \n
-// // Function call to initialize app
-// init();
