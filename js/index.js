@@ -62,7 +62,7 @@ inquirer.prompt([
 // creates a new README file and adds user info
 function writeToFile(userInfo) {
     fs.promises.writeFile("../README.md", `# ${userInfo.title} \n \n`);
-    if (userInfo.license == 'MIT') {
+    if (userInfo.license == 'MIT') { // appends badge based off user's license 
         fs.promises.appendFile("../README.md", `[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/Apache-2.0) \n \n`);
     } else if (userInfo.license == 'Apache 2.0') {
         fs.promises.appendFile("../README.md", `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) \n \n`);

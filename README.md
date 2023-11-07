@@ -1,30 +1,30 @@
-# ReadMe Generator 
+# title 
  
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/Apache-2.0) 
+ 
+## Description 
+ 
+generates readme with user input 
  
 ## Table of Contents 
  
 [Description](#description) | [Installation](#installation) | [Usage](#usage) | [Contributions](#contributions) | [Testing](#testing) | [Questions](#questions) | [License](#license) 
  
-## Description 
- 
-Creates a high quality README based off user input 
- 
 ## Installation 
  
- 
+install 
  
 ## Usage 
  
- 
+[Usage-Vid](https://watch.screencastify.com/v/W8t02d9x9Mgc9GTy6UZg)
  
 ## Contributions 
  
- 
+dont 
  
 ## Testing 
  
- 
+dont 
  
 ## Questions 
  
